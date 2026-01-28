@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stix:STIX_Package
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:indicator="http://stix.mitre.org/Indicator-2"
+    xmlns:cybox="http://cybox.mitre.org/cybox-2"
+    xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    id="example:stix-package-1"
+    version="1.0">
+
+    <stix:STIX_Header>
+        <stix:Title>Test IP Threat Feed</stix:Title>
+        <stix:Description>Sample STIX 1.0 feed for Check Point CTI testing</stix:Description>
+    </stix:STIX_Header>
+
+    <stix:Indicators>
+
+        <!-- Indicator 1 -->
+        <stix:Indicator id="example:indicator-1">
+            <indicator:Title>Malicious IP 192.0.2.10</indicator:Title>
+            <indicator:Observable>
+                <cybox:Object>
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>192.0.2.10</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- Indicator 2 -->
+        <stix:Indicator id="example:indicator-2">
+            <indicator:Title>Malicious IP 192.0.2.20</indicator:Title>
+            <indicator:Observable>
+                <cybox:Object>
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>192.0.2.20</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- Indicator 3 -->
+        <stix:Indicator id="example:indicator-3">
+            <indicator:Title>Malicious IP 198.51.100.5</indicator:Title>
+            <indicator:Observable>
+                <cybox:Object>
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>198.51.100.5</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- Indicator 4 -->
+        <stix:Indicator id="example:indicator-4">
+            <indicator:Title>Malicious IP 198.51.100.25</indicator:Title>
+            <indicator:Observable>
+                <cybox:Object>
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>198.51.100.25</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- Indicator 5 -->
+        <stix:Indicator id="example:indicator-5">
+            <indicator:Title>Malicious IP 203.0.113.15</indicator:Title>
+            <indicator:Observable>
+                <cybox:Object>
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>203.0.113.15</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- Indicator 6 -->
+        <stix:Indicator id="example:indicator-6">
+            <indicator:Title>Malicious IP 203.0.113.30</indicator:Title>
+            <indicator:Observable>
+                <cybox:Object>
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>203.0.113.30</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- Indicator 7 -->
+        <stix:Indicator id="example:indicator-7">
+            <indicator:Title>Malicious IP 203.0.113.45</indicator:Title>
+            <indicator:Observable>
+                <cybox:Object>
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>203.0.113.45</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- Indicator 8 -->
+        <stix:Indicator id="example:indicator-8">
+            <indicator:Title>Malicious IP 192.0.2.55</indicator:Title>
+            <indicator:Observable>
+                <cybox:Object>
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>192.0.2.55</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- Indicator 9 -->
+        <stix:Indicator id="example:indicator-9">
+            <indicator:Title>Malicious IP 198.51.100.75</indicator:Title>
+            <indicator:Observable>
+                <cybox:Object>
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>198.51.100.75</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- Indicator 10 -->
+        <stix:Indicator id="example:indicator-10">
+            <indicator:Title>Malicious IP 203.0.113.90</indicator:Title>
+            <indicator:Observable>
+                <cybox:Object>
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>203.0.113.90</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+    </stix:Indicators>
+
+</stix:STIX_Package>
