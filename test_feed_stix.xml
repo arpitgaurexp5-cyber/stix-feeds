@@ -1,26 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<stix:STIX_Package
- xmlns:stix="http://stix.mitre.org/stix-1"
- xmlns:indicator="http://stix.mitre.org/Indicator-2"
- xmlns:cybox="http://cybox.mitre.org/cybox-2"
- xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<stix:STIX_Package 
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:indicator="http://stix.mitre.org/Indicator-2"
+    xmlns:cybox="http://hisp.mitre.org/cybox-2"
+    xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+    xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1"
+    xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    id="example:Package-1" version="1.0">
+    
+    <stix:STIX_Header>
+        <stix:Title>CheckPoint R82 Custom Indicators</stix:Title>
+        <stix:Package_Intent>Indicators - Watchlist</stix:Package_Intent>
+    </stix:STIX_Header>
 
-  <stix:Indicators>
+    <stix:Indicators>
+        <stix:Indicator id="example:Indicator-IP" xsi:type="indicator:IndicatorType">
+            <indicator:Title>Malicious IP</indicator:Title>
+            <indicator:Type>IP Watchlist</indicator:Type>
+            <indicator:Observable id="example:Obs-IP">
+                <cybox:Object id="example:Obj-IP">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value condition="Equals">1.2.3.4</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
 
-    <indicator:Indicator>
+        <stix:Indicator id="example:Indicator-Domain" xsi:type="indicator:IndicatorType">
+            <indicator:Title>Malicious Domain</indicator:Title>
+            <indicator:Type>Domain Watchlist</indicator:Type>
+            <indicator:Observable id="example:Obs-Domain">
+                <cybox:Object id="example:Obj-Domain">
+                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                        <DomainNameObj:Value condition="Equals">malicious-site.com</DomainNameObj:Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
 
-      <indicator:Observable>
-        <cybox:Observable>
-          <cybox:Properties xsi:type="URIObj:URIObjectType">
-            <URIObj:Value>http://example-malware.test/bad.exe</URIObj:Value>
-            <URIObj:Type>URL</URIObj:Type>
-          </cybox:Properties>
-        </cybox:Observable>
-      </indicator:Observable>
-
-    </indicator:Indicator>
-
-  </stix:Indicators>
-
+        <stix:Indicator id="example:Indicator-URL" xsi:type="indicator:IndicatorType">
+            <indicator:Title>Malicious URL</indicator:Title>
+            <indicator:Type>URL Watchlist</indicator:Type>
+            <indicator:Observable id="example:Obs-URL">
+                <cybox:Object id="example:Obj-URL">
+                    <cybox:Properties xsi:type="URIObj:URIObjectType">
+                        <URIObj:Value condition="Equals">http://badlink.com/phishing</URIObj:Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
 </stix:STIX_Package>
