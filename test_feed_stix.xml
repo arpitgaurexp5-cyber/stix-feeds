@@ -3,40 +3,30 @@
  xmlns:stix="http://stix.mitre.org/stix-1"
  xmlns:indicator="http://stix.mitre.org/Indicator-2"
  xmlns:cybox="http://cybox.mitre.org/cybox-2"
- xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
  xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-  <stix:STIX_Header>
-    <stix:Title>Custom Static STIX Feed</stix:Title>
-    <stix:Package_Intent>Indicators</stix:Package_Intent>
-  </stix:STIX_Header>
-
   <stix:Indicators>
 
-    <indicator:Indicator id="example:indicator-1">
+    <indicator:Indicator>
       <indicator:Observable>
-        <cybox:Observable id="example:observable-1">
-          <cybox:Object id="example:object-1">
-            <cybox:Properties xsi:type="URIObj:URIObjectType">
-              <URIObj:Value>http://bad-example.com/malware.exe</URIObj:Value>
-              <URIObj:Type>URL</URIObj:Type>
-            </cybox:Properties>
-          </cybox:Object>
-        </cybox:Observable>
+        <cybox:Object>
+          <cybox:Properties xsi:type="URIObj:URIObjectType">
+            <URIObj:Value>http://bad-example.com/malware.exe</URIObj:Value>
+            <URIObj:Type>URL</URIObj:Type>
+          </cybox:Properties>
+        </cybox:Object>
       </indicator:Observable>
     </indicator:Indicator>
 
-    <indicator:Indicator id="example:indicator-2">
+    <indicator:Indicator>
       <indicator:Observable>
-        <cybox:Observable id="example:observable-2">
-          <cybox:Object id="example:object-2">
-            <cybox:Properties xsi:type="URIObj:URIObjectType">
-              <URIObj:Value>https://evil-site.net/dropper</URIObj:Value>
-              <URIObj:Type>URL</URIObj:Type>
-            </cybox:Properties>
-          </cybox:Object>
-        </cybox:Observable>
+        <cybox:Object>
+          <cybox:Properties xsi:type="URIObj:URIObjectType">
+            <URIObj:Value>https://evil-site.net/dropper</URIObj:Value>
+            <URIObj:Type>URL</URIObj:Type>
+          </cybox:Properties>
+        </cybox:Object>
       </indicator:Observable>
     </indicator:Indicator>
 
