@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stix:STIX_Package
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:indicator="http://stix.mitre.org/Indicator-2"
+    xmlns:cybox="http://cybox.mitre.org/cybox-2"
+    xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+    xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+    xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    id="stix:Package-1"
+    version="1.2">
+
+    <stix:STIX_Header>
+        <stix:Title>IOC Watchlist</stix:Title>
+    </stix:STIX_Header>
+
+    <stix:Indicators>
+
+        <!-- FILE HASH 1 -->
+        <stix:Indicator id="stix:Indicator-1" xsi:type="indicator:IndicatorType">
+            <indicator:Observable id="stix:Observable-1">
+                <cybox:Object id="stix:Object-1">
+                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                        <FileObj:Hashes>
+                            <cyboxCommon:Hash>
+                                <cyboxCommon:Type>MD5</cyboxCommon:Type>
+                                <cyboxCommon:Simple_Hash_Value>0522e955aaee70b102e843f14c13a92c</cyboxCommon:Simple_Hash_Value>
+                            </cyboxCommon:Hash>
+                        </FileObj:Hashes>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- FILE HASH 2 -->
+        <stix:Indicator id="stix:Indicator-2" xsi:type="indicator:IndicatorType">
+            <indicator:Observable id="stix:Observable-2">
+                <cybox:Object id="stix:Object-2">
+                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                        <FileObj:Hashes>
+                            <cyboxCommon:Hash>
+                                <cyboxCommon:Type>MD5</cyboxCommon:Type>
+                                <cyboxCommon:Simple_Hash_Value>0522e955aaee70b102e843f14c13a92d</cyboxCommon:Simple_Hash_Value>
+                            </cyboxCommon:Hash>
+                        </FileObj:Hashes>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- IP ADDRESS 1 -->
+        <stix:Indicator id="stix:Indicator-3" xsi:type="indicator:IndicatorType">
+            <indicator:Observable id="stix:Observable-3">
+                <cybox:Object id="stix:Object-3">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType">
+                        <AddressObj:Address_Value>116.30.7.55</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- IP ADDRESS 2 -->
+        <stix:Indicator id="stix:Indicator-4" xsi:type="indicator:IndicatorType">
+            <indicator:Observable id="stix:Observable-4">
+                <cybox:Object id="stix:Object-4">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType">
+                        <AddressObj:Address_Value>31.215.70.187</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- IP RANGE 1 -->
+        <stix:Indicator id="stix:Indicator-5" xsi:type="indicator:IndicatorType">
+            <indicator:Observable id="stix:Observable-5">
+                <cybox:Object id="stix:Object-5">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType">
+                        <AddressObj:Address_Value>185.100.87.0/24</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+        <!-- IP RANGE 2 -->
+        <stix:Indicator id="stix:Indicator-6" xsi:type="indicator:IndicatorType">
+            <indicator:Observable id="stix:Observable-6">
+                <cybox:Object id="stix:Object-6">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType">
+                        <AddressObj:Address_Value>45.140.16.0/20</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+
+    </stix:Indicators>
+
+</stix:STIX_Package>
